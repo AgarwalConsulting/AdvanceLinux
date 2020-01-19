@@ -5,8 +5,8 @@
 # Credits: https://medium.com/@JohnFoderaro/how-to-set-up-a-local-linux-environment-with-vagrant-163f0ba4da77
 
 # Box / OS
-# VAGRANT_BOX = 'ubuntu/trusty64'
-VAGRANT_BOX = 'centos/7'
+VAGRANT_BOX = 'ubuntu/trusty64'
+# VAGRANT_BOX = 'centos/8'
 
 # Memorable name for your
 VM_NAME = 'advanced-linux'
@@ -54,13 +54,14 @@ Vagrant.configure(2) do |config|
   # Install Git, gcc, etc.
   config.vm.provision "shell", inline: <<-SHELL
     ## For CentOS
-    echo "Hello, world!"
+    # yum install -y kernel-devel
+    # yum install -y wget git
 
     ## For Ubuntu
-    # apt-get update
-    # apt-get install -y git
-    # apt-get update
-    # apt-get upgrade -y
-    # apt-get autoremove -y
+    apt-get update
+    apt-get install -y wget git
+    apt-get update
+    apt-get upgrade -y
+    apt-get autoremove -y
   SHELL
 end
