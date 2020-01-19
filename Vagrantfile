@@ -59,7 +59,7 @@ Vagrant.configure(2) do |config|
 
     ## For Ubuntu
     apt-get update
-    apt-get install -y wget git
+    apt-get install -y wget git tree
     apt-get update
     apt-get upgrade -y
     apt-get autoremove -y
