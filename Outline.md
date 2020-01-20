@@ -47,7 +47,10 @@
   * `lstat`
 * File types
 * File system & tables
-* Non-blocking I/O
+* Advanced I/O
+  * Non-blocking I/O
+  * I/O Multiplexing
+  * Memory mapped I/O
 
 ### Processes
 
@@ -74,8 +77,6 @@
 * Pseudoterminals
 * Mount points
 * `/dev`
-* SCSI devices
-* dmesg
 * IP Tables
 * Signals
 
@@ -83,3 +84,11 @@
 
 * Deep dive into strace
 * Using and understanding `gdb`
+
+---
+
+## References
+
+* [Linux kernel scheduler](https://helix979.github.io/jkoo/post/os-scheduler/)
+* [How does the open system call work](https://0xax.gitbooks.io/linux-insides/content/SysCall/linux-syscall-5.html)
+* [Guide to Faster, Less Frustrating Debugging](http://heather.cs.ucdavis.edu/~matloff/UnixAndC/CLanguage/Debug.html)
